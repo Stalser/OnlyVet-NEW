@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OnlyVet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-badge">O</div>
+      <div>
+        <div class="logo-text-primary">OnlyVet</div>
+        <div class="logo-text-secondary">Онлайн-ветклиника</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="doctors.html">Врачи</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="client-dashboard.html" class="btn btn-outline">Личный кабинет</a>
+      <a href="client-dashboard.html" class="btn btn-primary">Записаться</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <h1 class="page-title">Личный кабинет</h1>
+      <p class="page-subtitle">
+        Это демонстрационный вариант интерфейса. Позже все данные будут подтягиваться из Vetmanager и вашей учётной записи.
+      </p>
+      <div class="client-layout">
+        <aside class="client-sidebar">
+          <div class="client-nav-section">
+            <div class="client-nav-section-title">Обзор</div>
+            <ul class="client-nav-list">
+              <li><a href="client-dashboard.html" class="active">Дашборд</a></li>
+              <li><a href="client-appointments.html">Записи</a></li>
+              <li><a href="client-documents.html">Документы</a></li>
+            </ul>
+          </div>
+          <div class="client-nav-section" style="margin-top: 12px;">
+            <div class="client-nav-section-title">Профиль</div>
+            <ul class="client-nav-list">
+              <li><a href="client-pets.html">Питомцы</a></li>
+              <li><a href="client-trusted.html">Доверенные лица</a></li>
+              <li><a href="client-profile.html">Настройки профиля</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <div class="client-main">
+          <div class="dashboard-grid">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <div class="card-title">Ближайшие записи</div>
+                  <div class="card-subtitle">Пока здесь примерные данные.</div>
+                </div>
+                <a href="client-appointments.html" class="section-link">Все записи →</a>
+              </div>
+              <ul class="list-compact">
+                <li>
+                  <span>30.11 · 19:00 · Эльвин М.</span>
+                  <span class="chip chip-soft">Онлайн</span>
+                </li>
+                <li>
+                  <span>02.12 · 12:30 · Диана Ч.</span>
+                  <span class="chip">Повторный приём</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <div class="card-title">Питомцы</div>
+                  <div class="card-subtitle">Краткий обзор.</div>
+                </div>
+                <a href="client-pets.html" class="section-link">Все питомцы →</a>
+              </div>
+              <ul class="list-compact">
+                <li>
+                  <span>Кошка Локи</span>
+                  <span class="chip-soft">Под наблюдением</span>
+                </li>
+                <li>
+                  <span>Собака Рекс</span>
+                  <span class="chip">Профилактика</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Недавние документы</div>
+                <div class="card-subtitle">Анализы, заключения и другие файлы.</div>
+              </div>
+              <a href="client-documents.html" class="section-link">Все документы →</a>
+            </div>
+            <ul class="list-compact">
+              <li>
+                <span>25.11 · Заключение по УЗИ · Локи</span>
+                <span class="chip">PDF</span>
+              </li>
+              <li>
+                <span>20.11 · Общий анализ крови · Рекс</span>
+                <span class="chip">PDF</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Доверенные лица</div>
+                <div class="card-subtitle">Кто может управлять лечением и доступом к данным.</div>
+              </div>
+              <a href="client-trusted.html" class="section-link">Настроить →</a>
+            </div>
+            <ul class="list-compact">
+              <li>
+                <span>Екатерина · полные права</span>
+                <span class="chip-success">Активно</span>
+              </li>
+              <li>
+                <span>Анна · просмотр + запись</span>
+                <span class="chip">Ограничено</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© OnlyVet, онлайн-ветеринарная клиника</div>
+    <div>
+      <a href="legal-terms.html">Оферта</a> ·
+      <a href="legal-policy.html">ПДн</a> ·
+      <a href="legal-rules.html">Правила</a>
+    </div>
+  </div>
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

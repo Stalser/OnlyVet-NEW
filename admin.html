@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OnlyVet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-badge">O</div>
+      <div>
+        <div class="logo-text-primary">OnlyVet</div>
+        <div class="logo-text-secondary">Онлайн-ветклиника</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="doctors.html">Врачи</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="client-dashboard.html" class="btn btn-outline">Личный кабинет</a>
+      <a href="client-dashboard.html" class="btn btn-primary">Записаться</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <h1 class="page-title">Админ-панель сайта</h1>
+      <p class="page-subtitle">
+        Черновой интерфейс для управления витринной частью сайта и подготовкой к интеграции с Vetmanager.
+      </p>
+      <div class="admin-layout">
+        <aside class="admin-sidebar">
+          <ul class="admin-nav-list">
+            <li><a href="admin.html" class="active">Обзор</a></li>
+            <li><a href="#doctors">Врачи сайта</a></li>
+            <li><a href="#services">Услуги сайта</a></li>
+            <li><a href="#content">Контент и блоки</a></li>
+            <li><a href="#settings">Интеграция</a></li>
+          </ul>
+        </aside>
+        <div class="admin-main">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Состояние сайта</div>
+                <div class="card-subtitle">Пример того, как можно отображать ключевую информацию.</div>
+              </div>
+            </div>
+            <ul class="list-compact">
+              <li>
+                <span>Врачей на сайте</span>
+                <span>5</span>
+              </li>
+              <li>
+                <span>Услуг на сайте</span>
+                <span>8</span>
+              </li>
+              <li>
+                <span>Интеграция с Vetmanager</span>
+                <span class="badge badge-live">Черновой режим</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card" id="doctors">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Врачи сайта</div>
+                <div class="card-subtitle">В будущем здесь можно будет подтягивать список врачей напрямую из Vetmanager.</div>
+              </div>
+              <button class="btn btn-outline" type="button">Добавить врача</button>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Имя</th>
+                  <th>Специализация</th>
+                  <th>Источник</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Эльвин Мазагирович</td>
+                  <td>Эксперт, сложные случаи</td>
+                  <td>Vetmanager</td>
+                  <td><button class="btn btn-outline" type="button">Редактировать</button></td>
+                </tr>
+                <tr>
+                  <td>Диана Чемерилова</td>
+                  <td>Терапия</td>
+                  <td>Vetmanager</td>
+                  <td><button class="btn btn-outline" type="button">Редактировать</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card" id="services">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Услуги сайта</div>
+                <div class="card-subtitle">Витринные названия и описания, привязанные к услугам в CRM.</div>
+              </div>
+              <button class="btn btn-outline" type="button">Добавить услугу</button>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Название на сайте</th>
+                  <th>Тип в CRM</th>
+                  <th>Цена</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Онлайн-консультация</td>
+                  <td>Приём терапевта (онлайн)</td>
+                  <td>от 2 500 ₽</td>
+                  <td><button class="btn btn-outline" type="button">Редактировать</button></td>
+                </tr>
+                <tr>
+                  <td>Второе мнение</td>
+                  <td>Консилиум</td>
+                  <td>от 3 000 ₽</td>
+                  <td><button class="btn btn-outline" type="button">Редактировать</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card" id="settings">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Интеграция с Vetmanager</div>
+                <div class="card-subtitle">Сейчас здесь только заглушка, но структура уже готова.</div>
+              </div>
+            </div>
+            <p style="font-size:13px;color:var(--text-secondary);">
+              Позже здесь появятся поля для токена API, выбора клиники, настройки типов приёмов и логов обмена данными.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© OnlyVet, онлайн-ветеринарная клиника</div>
+    <div>
+      <a href="legal-terms.html">Оферта</a> ·
+      <a href="legal-policy.html">ПДн</a> ·
+      <a href="legal-rules.html">Правила</a>
+    </div>
+  </div>
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

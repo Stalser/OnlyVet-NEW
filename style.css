@@ -1,4 +1,3 @@
-
 :root {
   --navy: #1E2B3C;
   --teal: #3FA7A3;
@@ -6,8 +5,8 @@
   --light-bg: #F9FAFB;
   --text-main: #0f172a;
   --text-secondary: #6b7280;
-  --radius-lg: 16px;
-  --radius-xl: 20px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
 }
 
 *,
@@ -131,7 +130,7 @@ img {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, opacity 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
   font-weight: 500;
 }
 
@@ -152,8 +151,15 @@ img {
   border: 1px solid rgba(248,250,252,0.7);
 }
 
-.btn-outline:hover {
-  background: rgba(15,23,42,0.2);
+.btn-outline-dark {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid rgba(148,163,184,0.7);
+}
+
+.btn-outline:hover,
+.btn-outline-dark:hover {
+  opacity: 0.9;
 }
 
 .mobile-toggle {
@@ -178,7 +184,7 @@ img {
 .hero {
   background: var(--navy);
   color: white;
-  padding: 32px 0 38px;
+  padding: 32px 0 40px;
   position: relative;
   overflow: hidden;
 }
@@ -186,12 +192,12 @@ img {
 .hero::after {
   content: "";
   position: absolute;
-  width: 380px;
-  height: 380px;
+  width: 420px;
+  height: 420px;
   border-radius: 999px;
-  border: 36px solid rgba(148,163,184,0.16);
-  right: -120px;
-  bottom: -140px;
+  border: 40px solid rgba(148,163,184,0.16);
+  right: -140px;
+  bottom: -170px;
 }
 
 .hero-inner {
@@ -250,64 +256,34 @@ img {
   background: #4ade80;
 }
 
-.hero-card {
-  background: rgba(15,23,42,0.9);
-  border-radius: 24px;
-  padding: 16px 16px 14px;
-  box-shadow: 0 18px 45px rgba(15,23,42,0.6);
-  border: 1px solid rgba(148,163,184,0.5);
+.hero-visual {
   position: relative;
   z-index: 1;
 }
 
-.hero-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
+.hero-photo {
+  border-radius: 28px;
+  background: linear-gradient(135deg, var(--teal), var(--navy));
+  padding: 6px;
+  box-shadow: 0 22px 60px rgba(15,23,42,0.7);
 }
 
-.hero-card-title {
-  font-size: 14px;
-  font-weight: 500;
+.hero-photo-inner {
+  border-radius: 22px;
+  background: url('img/hero.jpg') center/cover no-repeat;
+  min-height: 220px;
 }
 
-.hero-card-note {
-  font-size: 11px;
-  opacity: 0.8;
-}
-
-.hero-pill {
-  font-size: 11px;
-  padding: 4px 10px;
+.hero-photo-note {
+  position: absolute;
+  bottom: -10px;
+  left: 18px;
+  background: rgba(15,23,42,0.9);
   border-radius: 999px;
-  border: 1px solid rgba(148,163,184,0.7);
-  background: rgba(15,23,42,0.7);
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.hero-mini-card {
-  background: rgba(15,23,42,0.95);
-  border-radius: 14px;
-  padding: 9px 11px;
-  border: 1px solid rgba(55,65,81,0.9);
-}
-
-.hero-mini-label {
+  padding: 6px 12px;
   font-size: 11px;
-  opacity: 0.75;
-  margin-bottom: 3px;
+  border: 1px solid rgba(148,163,184,0.6);
 }
-
-.hero-mini-value {
-  font-size: 13px;
-}
-
 /* SECTION COMMON */
 
 .section {
@@ -344,7 +320,7 @@ img {
   background: white;
   border-radius: 24px;
   padding: 18px 18px 16px;
-  box-shadow: 0 18px 45px rgba(15,23,42,0.06);
+  box-shadow: 0 18px 45px rgba(15,23,42,0.04);
 }
 
 .advantages-grid {
@@ -371,41 +347,44 @@ img {
   color: var(--text-secondary);
 }
 
-/* DOCTORS & SERVICES */
+/* GRID WRAPPERS */
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
 }
+
+/* DOCTOR CARD */
 
 .doctor-card {
   background: white;
-  border-radius: 20px;
-  padding: 14px 14px 12px;
+  border-radius: var(--radius-xl);
+  padding: 16px 16px 14px;
   border: 1px solid rgba(226,232,240,0.95);
-  box-shadow: 0 18px 40px rgba(15,23,42,0.02);
+  box-shadow: 0 18px 40px rgba(15,23,42,0.03);
   display: flex;
   flex-direction: column;
   gap: 10px;
+  min-height: 240px;
 }
 
-.doctor-head {
+.doctor-top {
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }
 
 .doctor-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
   background: linear-gradient(135deg, var(--teal), var(--navy));
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .doctor-main {
@@ -424,10 +403,17 @@ img {
   margin-bottom: 4px;
 }
 
+.doctor-services {
+  font-size: 12px;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
 .doctor-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
+  margin-top: 2px;
 }
 
 .tag {
@@ -443,7 +429,8 @@ img {
   color: var(--navy);
 }
 
-.doctor-foot {
+.doctor-bottom {
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -451,19 +438,22 @@ img {
   color: var(--text-secondary);
 }
 
-.doctor-foot .btn {
+.doctor-bottom .btn-primary {
   font-size: 12px;
-  padding: 6px 10px;
+  padding: 7px 12px;
 }
+
+/* SERVICE CARD */
 
 .service-card {
   background: white;
-  border-radius: 20px;
-  padding: 14px 14px 12px;
+  border-radius: var(--radius-xl);
+  padding: 16px 16px 14px;
   border: 1px solid rgba(226,232,240,0.95);
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-height: 200px;
 }
 
 .service-name {
@@ -476,16 +466,23 @@ img {
   color: var(--text-secondary);
 }
 
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
 .service-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
+  margin-top: auto;
 }
 
-.service-meta .btn {
+.service-meta .btn-primary {
   font-size: 12px;
-  padding: 6px 10px;
+  padding: 7px 12px;
 }
 
 .service-price {
@@ -531,6 +528,45 @@ img {
   font-size: 13px;
   color: var(--text-secondary);
 }
+/* REVIEWS */
+
+.review-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 14px 14px 12px;
+  border: 1px solid rgba(226,232,240,0.95);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 160px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.review-author {
+  font-weight: 500;
+}
+
+.review-pet {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.review-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.review-rating {
+  font-size: 12px;
+  color: var(--coral);
+}
+
 
 /* FOOTER */
 
@@ -550,7 +586,7 @@ img {
   opacity: 0.85;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE — АДАПТИВ */
 
 @media (max-width: 900px) {
   .hero-inner {
@@ -576,3 +612,709 @@ img {
     font-size: 26px;
   }
 }
+
+/* ----------------------------- */
+/* ДОКТОРЫ — СТРАНИЦА ФИЛЬТРОВ */
+/* ----------------------------- */
+
+.btn-outline-dark {
+  border-radius: 999px;
+  padding: 6px 14px;
+  border: 1px solid rgba(148,163,184,0.7);
+  background: white;
+  color: var(--navy);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-outline-dark:hover {
+  background: rgba(148,163,184,0.12);
+}
+
+/* ----------------------------- */
+/* ОТСТУПЫ ДЛЯ СТРАНИЦ */
+.page-title {
+  font-size: 26px;
+  margin: 0 0 8px;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+}
+
+/* ----------------------------- */
+/* ОБЩИЕ ПОДЛОЖКИ И ТЕНИ */
+
+.bg-light {
+  background: var(--light-bg);
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 40px rgba(15,23,42,0.06);
+}
+
+.round-xl {
+  border-radius: var(--radius-xl);
+}
+
+/* ----------------------------- */
+/* КАРТОЧКИ ЛОГО И ICON PLACEHOLDER */
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(63,167,163,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal);
+  font-size: 20px;
+}
+
+/* ----------------------------- */
+/* ГОРИЗОНТАЛЬНЫЕ СПИСКИ */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  background: rgba(148,163,184,0.2);
+  color: var(--navy);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* ----------------------------- */
+/* БЛОК ДЛЯ ФОТО НА СТРАНИЦЕ ДЕТАЛЬНОГО ВРАЧА */
+
+.photo-large {
+  width: 100%;
+  border-radius: 28px;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ----------------------------- */
+/* КАРТОЧКИ "РАСШИРЕННАЯ ИНФОРМАЦИЯ" */
+.card-info {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 20px;
+  border: 1px solid rgba(226,232,240,0.7);
+  box-shadow: 0 10px 28px rgba(15,23,42,0.05);
+  margin-bottom: 20px;
+}
+
+.card-info h3 {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-info p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ----------------------------- */
+/* КНОПКА НАЗАД НА ДЕТАЛЬНЫХ СТРАНИЦАХ */
+.btn-back {
+  font-size: 13px;
+  color: var(--navy);
+  margin-bottom: 20px;
+  display: inline-block;
+  opacity: 0.8;
+}
+
+.btn-back:hover {
+  opacity: 1;
+}
+
+/* ----------------------------- */
+/* ТИПЫ УСЛУГ ДЛЯ ФИЛЬТРОВ */
+.service-chip {
+  font-size: 11px;
+  padding: 3px 8px;
+  background: rgba(247,118,92,0.1);
+  border-radius: 999px;
+  color: var(--coral);
+  margin-right: 6px;
+}
+
+/* ----------------------------- */
+/* ТЕКСТОВЫЕ БЛОКИ */
+.text-block {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+/* ----------------------------- */
+/* ЛИНИИ, РАЗДЕЛИТЕЛИ */
+.divider {
+  height: 1px;
+  background: rgba(148,163,184,0.3);
+  margin: 20px 0;
+}
+/* -------------------------------------- */
+/* БЛОК ОТЗЫВОВ — СТРАНИЦА ВСЕ ОТЗЫВЫ */
+/* -------------------------------------- */
+
+.review-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 18px 18px 14px;
+  border: 1px solid rgba(226,232,240,0.95);
+  box-shadow: 0 16px 32px rgba(15,23,42,0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-author {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.review-pet {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.review-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+.review-rating {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--coral);
+}
+
+/* -------------------------------------- */
+/* КАРТОЧКА ВРАЧА — ДЕТАЛЬНАЯ СТРАНИЦА */
+/* -------------------------------------- */
+
+.doctor-detail {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+}
+
+.doctor-detail-img {
+  width: 100%;
+  height: 300px;
+  border-radius: 24px;
+  background-size: cover;
+  background-position: center;
+  background-color: #e5e7eb;
+}
+
+.doctor-detail-info h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.doctor-detail-role {
+  font-size: 16px;
+  color: var(--teal);
+  margin-bottom: 14px;
+}
+
+.doctor-detail-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.doctor-detail-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.doctor-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.doctor-detail-tags .tag {
+  background: rgba(63,167,163,0.15);
+  color: var(--navy);
+}
+
+/* -------------------------------------- */
+/* СТРАНИЦА ДЕТАЛЕЙ УСЛУГИ */
+/* -------------------------------------- */
+
+.service-detail {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 30px;
+}
+
+.service-detail-title {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: var(--navy);
+}
+
+.service-detail-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.service-detail-section {
+  margin-top: 26px;
+}
+
+.service-detail-section h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.service-detail-box {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 16px 18px;
+  border: 1px solid rgba(226,232,240,0.8);
+  box-shadow: 0 14px 32px rgba(15,23,42,0.03);
+}
+
+.service-detail-list {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.service-detail-aside {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 20px;
+  border: 1px solid rgba(226,232,240,0.9);
+  box-shadow: 0 18px 38px rgba(15,23,42,0.05);
+}
+
+.service-price-large {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.service-detail-btn {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  padding: 12px 0;
+  background: var(--coral);
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.service-detail-btn:hover {
+  opacity: 0.9;
+}
+
+/* -------------------------------------- */
+/* СТРАНИЦА ОТЗЫВА — ДЕТАЛИ (ЕСЛИ НУЖНО) */
+/* -------------------------------------- */
+
+.review-detail {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 26px 28px;
+  border: 1px solid rgba(226,232,240,0.8);
+  box-shadow: 0 22px 48px rgba(15,23,42,0.04);
+}
+
+.review-detail-author {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.review-detail-pet {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+}
+
+.review-detail-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* -------------------------------------- */
+/* ЛИЧНЫЙ КАБИНЕТ — ОСНОВА (ДАЛЕЕ ДОРАБОТАЕМ) */
+/* -------------------------------------- */
+
+.lk-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+}
+
+.lk-sidebar {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 16px;
+  border: 1px solid rgba(226,232,240,0.9);
+}
+
+.lk-sidebar-title {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+}
+
+.lk-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lk-nav a {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  color: var(--text-secondary);
+}
+
+.lk-nav a.active {
+  background: rgba(63,167,163,0.08);
+  color: var(--navy);
+}
+
+.lk-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lk-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 18px;
+  border: 1px solid rgba(226,232,240,0.9);
+  box-shadow: 0 10px 30px rgba(15,23,42,0.05);
+}
+
+.lk-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.lk-card-sub {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.lk-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lk-list li {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lk-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.lk-value {
+  font-size: 14px;
+}
+
+.lk-pet-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 14px;
+  border: 1px solid rgba(226,232,240,0.8);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.lk-pet-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--teal), var(--navy));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.lk-pet-info {
+  flex: 1;
+}
+
+.lk-pet-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.lk-pet-meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* ----------------------------- */
+/* ДОВЕРЕННЫЕ ЛИЦА (ЛК) */
+/* ----------------------------- */
+
+.trusted-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 18px;
+  border: 1px solid rgba(226,232,240,0.9);
+  box-shadow: 0 10px 28px rgba(15,23,42,0.04);
+}
+
+.trusted-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trusted-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.trusted-role {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.trusted-perms {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.trusted-badge {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(63,167,163,0.15);
+  color: var(--navy);
+}
+
+/* ----------------------------- */
+/* ЗАПИСИ НА ПРИЁМ (ЛК) */
+/* ----------------------------- */
+
+.appointment-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 16px;
+  border: 1px solid rgba(226,232,240,0.8);
+  box-shadow: 0 10px 28px rgba(15,23,42,0.04);
+}
+
+.appointment-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.appointment-type {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ----------------------------- */
+/* ДОКУМЕНТЫ (ЛК) */
+/* ----------------------------- */
+
+.doc-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 14px;
+  border: 1px solid rgba(226,232,240,0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doc-info {
+  font-size: 14px;
+}
+
+.doc-type {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.doc-download {
+  font-size: 12px;
+  color: var(--coral);
+  cursor: pointer;
+}
+
+.doc-download:hover {
+  opacity: 0.8;
+}
+
+/* ----------------------------- */
+/* ФОРМЫ, INPUT, SELECT */
+/* ----------------------------- */
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(148,163,184,0.45);
+  font-size: 14px;
+  color: var(--text-main);
+  background: white;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 2px rgba(63,167,163,0.15);
+}
+
+label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* ----------------------------- */
+/* КНОПКИ ДЛЯ ФОРМ */
+.btn-submit {
+  width: 100%;
+  background: var(--coral);
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  opacity: 0.9;
+}
+
+/* ----------------------------- */
+/* МОДАЛКИ — ОСНОВА */
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(15,23,42,0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.modal {
+  background: white;
+  padding: 24px;
+  border-radius: var(--radius-xl);
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 18px 48px rgba(15,23,42,0.35);
+}
+
+.modal-title {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.modal-close:hover {
+  color: var(--navy);
+}
+
+/* ----------------------------- */
+/* АДАПТИВ ЛК И ДЕТАЛЬНЫХ СТРАНИЦ */
+
+@media (max-width: 900px) {
+  .doctor-detail {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .lk-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .review-card {
+    padding: 12px;
+  }
+
+  .doctor-card,
+  .service-card {
+    padding: 12px;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ----------------------------- */
+/* ФИНИШ ФАЙЛА — ONLYVET CSS */

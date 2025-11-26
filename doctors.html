@@ -2,31 +2,36 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OnlyVet</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Врачи OnlyVet</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="page">
+
 <header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="logo">
-      <div class="logo-badge">O</div>
+      <div class="logo-mark">O</div>
       <div>
-        <div class="logo-text-primary">OnlyVet</div>
-        <div class="logo-text-secondary">Онлайн-ветклиника</div>
+        <div class="logo-text-main">ONLYVET</div>
+        <div class="logo-text-sub">Ветеринарная онлайн-клиника</div>
       </div>
     </a>
+
     <nav class="nav">
       <a href="index.html">Главная</a>
+      <a href="doctors.html" class="active">Врачи</a>
       <a href="services.html">Услуги</a>
-      <a href="doctors.html">Врачи</a>
-      <a href="contacts.html">Контакты</a>
+      <a href="reviews.html">Отзывы</a>
     </nav>
+
     <div class="nav-cta">
-      <a href="client-dashboard.html" class="btn btn-outline">Личный кабинет</a>
-      <a href="client-dashboard.html" class="btn btn-primary">Записаться</a>
+      <a href="#" class="btn btn-outline">Войти</a>
+      <a href="#" class="btn btn-primary">Записаться</a>
     </div>
+
     <button class="mobile-toggle" aria-label="Меню">
       <span></span><span></span><span></span>
     </button>
@@ -34,130 +39,102 @@
 </header>
 
 <main>
-  <section class="section">
-    <div class="container">
-      <h1 class="page-title">Врачи OnlyVet</h1>
-      <p class="page-subtitle">
-        Здесь вы можете спокойно познакомиться с командой и выбрать врача, с которым будете работать.
-      </p>
-      <div class="cards-row">
-        <article class="doctor-card">
-          <div class="doctor-header">
-            <div class="doctor-avatar">ЭМ</div>
-            <div class="doctor-main">
-              <div class="doctor-name">Эльвин Мазагирович</div>
-              <div class="doctor-role">Ветеринарный врач, эксперт</div>
-              <div class="doctor-tags">
-                <span class="tag-soft">Консилиум</span>
-                <span class="tag">Сложные случаи</span>
-                <span class="tag">Онлайн-формат</span>
-              </div>
-            </div>
-          </div>
-          <div class="doctor-footer">
-            <div class="doctor-meta">Опыт &gt; 10 лет · доказательная медицина</div>
-            <div class="doctor-actions">
-              <a href="client-dashboard.html" class="btn btn-outline">Записаться</a>
-            </div>
-          </div>
-        </article>
 
-        <article class="doctor-card">
-          <div class="doctor-header">
-            <div class="doctor-avatar">ДЧ</div>
-            <div class="doctor-main">
-              <div class="doctor-name">Диана Чемерилова</div>
-              <div class="doctor-role">Ветеринарный врач</div>
-              <div class="doctor-tags">
-                <span class="tag">Терапия</span>
-                <span class="tag">Кошки, собаки</span>
-              </div>
-            </div>
-          </div>
-          <div class="doctor-footer">
-            <div class="doctor-meta">Опыт 3+ года · приём онлайн</div>
-            <div class="doctor-actions">
-              <a href="client-dashboard.html" class="btn btn-outline">Записаться</a>
-            </div>
-          </div>
-        </article>
+<section class="section">
+  <div class="container">
 
-        <article class="doctor-card">
-          <div class="doctor-header">
-            <div class="doctor-avatar">ОВ</div>
-            <div class="doctor-main">
-              <div class="doctor-name">Олег Врач</div>
-              <div class="doctor-role">Ветеринарный врач</div>
-              <div class="doctor-tags">
-                <span class="tag">Диагностика</span>
-                <span class="tag">УЗИ</span>
-              </div>
-            </div>
-          </div>
-          <div class="doctor-footer">
-            <div class="doctor-meta">Работает в команде</div>
-            <div class="doctor-actions">
-              <a href="client-dashboard.html" class="btn btn-outline">Записаться</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="doctor-card">
-          <div class="doctor-header">
-            <div class="doctor-avatar">АК</div>
-            <div class="doctor-main">
-              <div class="doctor-name">Анна Кардиолог</div>
-              <div class="doctor-role">Кардиолог</div>
-              <div class="doctor-tags">
-                <span class="tag">Собаки</span>
-                <span class="tag-soft">Сердечные пациенты</span>
-              </div>
-            </div>
-          </div>
-          <div class="doctor-footer">
-            <div class="doctor-meta">Кардиология и сопровождение</div>
-            <div class="doctor-actions">
-              <a href="client-dashboard.html" class="btn btn-outline">Записаться</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="doctor-card">
-          <div class="doctor-header">
-            <div class="doctor-avatar">ОН</div>
-            <div class="doctor-main">
-              <div class="doctor-name">Онко Врач</div>
-              <div class="doctor-role">Онколог</div>
-              <div class="doctor-tags">
-                <span class="tag-soft">Онкология</span>
-                <span class="tag">Долгосрочное ведение</span>
-              </div>
-            </div>
-          </div>
-          <div class="doctor-footer">
-            <div class="doctor-meta">Онкология · планирование лечения</div>
-            <div class="doctor-actions">
-              <a href="client-dashboard.html" class="btn btn-outline">Записаться</a>
-            </div>
-          </div>
-        </article>
-
+    <div class="section-header">
+      <div>
+        <h1 class="section-title">Все врачи OnlyVet</h1>
+        <p class="section-subtitle">
+          Позже здесь появятся фильтры по специализации, услугам, формату приёма.
+        </p>
       </div>
     </div>
-  </section>
+
+    <div style="margin-bottom:16px;">
+      <button class="btn btn-outline-dark" type="button">Все</button>
+      <button class="btn btn-outline-dark" type="button">Терапия</button>
+      <button class="btn btn-outline-dark" type="button">Онкология</button>
+      <button class="btn btn-outline-dark" type="button">Диагностика</button>
+    </div>
+
+    <div class="cards-grid">
+
+      <!-- DOCTOR 1 -->
+      <article class="doctor-card">
+        <div class="doctor-top">
+          <div class="doctor-avatar">ЭМ</div>
+          <div class="doctor-main">
+            <div class="doctor-name">Эльвин Мазагирович</div>
+            <div class="doctor-role">Ветеринарный врач, эксперт</div>
+            <div class="doctor-services">Сложные случаи, консилиумы, онкология</div>
+            <div class="doctor-tags">
+              <span class="tag-soft">Консилиум</span>
+              <span class="tag">Сложные случаи</span>
+            </div>
+          </div>
+        </div>
+        <div class="doctor-bottom">
+          <span>Опыт &gt; 10 лет</span>
+          <button class="btn btn-primary">Профиль и запись</button>
+        </div>
+      </article>
+
+      <!-- DOCTOR 2 -->
+      <article class="doctor-card">
+        <div class="doctor-top">
+          <div class="doctor-avatar">ДЧ</div>
+          <div class="doctor-main">
+            <div class="doctor-name">Диана Чемерилова</div>
+            <div class="doctor-role">Ветеринарный врач</div>
+            <div class="doctor-services">Терапия кошек и собак, второе мнение</div>
+            <div class="doctor-tags">
+              <span class="tag">Терапия</span>
+              <span class="tag">Кошки и собаки</span>
+            </div>
+          </div>
+        </div>
+        <div class="doctor-bottom">
+          <span>Приём онлайн</span>
+          <button class="btn btn-primary">Профиль и запись</button>
+        </div>
+      </article>
+
+      <!-- DOCTOR 3 -->
+      <article class="doctor-card">
+        <div class="doctor-top">
+          <div class="doctor-avatar">ОВ</div>
+          <div class="doctor-main">
+            <div class="doctor-name">Олег Врач</div>
+            <div class="doctor-role">Диагностика</div>
+            <div class="doctor-services">УЗИ, интерпретация анализов, контроль динамики</div>
+            <div class="doctor-tags">
+              <span class="tag">УЗИ</span>
+              <span class="tag">Анализы</span>
+            </div>
+          </div>
+        </div>
+        <div class="doctor-bottom">
+          <span>Работает в команде</span>
+          <button class="btn btn-primary">Профиль и запись</button>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div>© OnlyVet, онлайн-ветеринарная клиника</div>
-    <div>
-      <a href="legal-terms.html">Оферта</a> ·
-      <a href="legal-policy.html">ПДн</a> ·
-      <a href="legal-rules.html">Правила</a>
-    </div>
+    <div>© OnlyVet, 2025</div>
+    <div>Доказательная медицина · Мы рядом, даже когда врач далеко.</div>
   </div>
 </footer>
+
 </div>
-<script src="script.js"></script>
 </body>
 </html>

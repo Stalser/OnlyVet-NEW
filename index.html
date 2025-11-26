@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>OnlyVet — ветеринарная онлайн‑клиника</title>
+  <title>OnlyVet — ветеринарная онлайн-клиника</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,14 +14,14 @@
       <div class="logo-mark">O</div>
       <div>
         <div class="logo-text-main">ONLYVET</div>
-        <div class="logo-text-sub">Ветеринарная онлайн‑клиника</div>
+        <div class="logo-text-sub">Ветеринарная онлайн-клиника</div>
       </div>
     </a>
     <nav class="nav">
       <a href="index.html" class="active">Главная</a>
-      <a href="#">Услуги</a>
-      <a href="#">Врачи</a>
-      <a href="#">Как это работает</a>
+      <a href="doctors.html">Врачи</a>
+      <a href="services.html">Услуги</a>
+      <a href="reviews.html">Отзывы</a>
     </nav>
     <div class="nav-cta">
       <a href="#" class="btn btn-outline">Войти</a>
@@ -34,13 +34,14 @@
 </header>
 
 <main>
+  <!-- HERO -->
   <section class="hero">
     <div class="container hero-inner">
       <div>
         <div class="hero-eyebrow">Цифровая ветеринария OnlyVet</div>
         <h1 class="hero-title">Экспертная помощь питомцу, когда ваша клиника — онлайн.</h1>
         <p class="hero-subtitle">
-          Онлайн‑консультации, второе мнение, разбор анализов и сопровождение сложных случаев — без поездок и суеты.
+          Онлайн-консультации, второе мнение, разбор анализов и сопровождение сложных случаев — без поездок и суеты.
         </p>
         <div class="hero-actions">
           <a href="#" class="btn btn-primary">Записаться на консультацию</a>
@@ -51,38 +52,17 @@
           <span>Фокус на доказательной медицине</span>
         </div>
       </div>
-      <div>
-        <div class="hero-card">
-          <div class="hero-card-header">
-            <div>
-              <div class="hero-card-title">Ваш личный кабинет</div>
-              <div class="hero-card-note">Питомцы, документы и доверенные лица — в одном месте.</div>
-            </div>
-            <div class="hero-pill">Пример интерфейса</div>
-          </div>
-          <div class="hero-grid">
-            <div class="hero-mini-card">
-              <div class="hero-mini-label">Питомцы</div>
-              <div class="hero-mini-value">Кошка Локи · собака Рекс</div>
-            </div>
-            <div class="hero-mini-card">
-              <div class="hero-mini-label">Документы</div>
-              <div class="hero-mini-value">Анализы, УЗИ, заключения</div>
-            </div>
-            <div class="hero-mini-card">
-              <div class="hero-mini-label">Доверенные лица</div>
-              <div class="hero-mini-value">Назначьте тех, кому доверяете</div>
-            </div>
-            <div class="hero-mini-card">
-              <div class="hero-mini-label">Записи</div>
-              <div class="hero-mini-value">Онлайн‑ и очные приёмы</div>
-            </div>
-          </div>
+
+      <div class="hero-visual">
+        <div class="hero-photo">
+          <div class="hero-photo-inner"></div>
         </div>
+        <div class="hero-photo-note">Спокойный онлайн-приём, где врач действительно читает ваши анализы.</div>
       </div>
     </div>
   </section>
 
+  <!-- ADVANTAGES -->
   <section class="section">
     <div class="container">
       <div class="section-header">
@@ -93,176 +73,228 @@
           </p>
         </div>
       </div>
+
       <div class="advantages">
         <div class="advantages-grid">
           <article class="adv-card">
             <div class="adv-title">Доказательная медицина</div>
-            <div class="adv-text">Все решения опираются на исследования, протоколы и консилиумный подход.</div>
+            <div class="adv-text">Решения базируются на исследованиях, протоколах и клиническом опыте.</div>
           </article>
+
           <article class="adv-card">
             <div class="adv-title">Онлайн без хаоса</div>
-            <div class="adv-text">Чёткая структура приёма, понятные шаги, понятные документы после консультации.</div>
+            <div class="adv-text">Чёткая структура приёма, документы и план в личном кабинете после консультации.</div>
           </article>
+
           <article class="adv-card">
-            <div class="adv-title">Сложные случаи</div>
-            <div class="adv-text">Онкология, хронические пациенты, неясные диагнозы — то, где важен опыт и глубина анализа.</div>
+            <div class="adv-title">Сложные пациенты</div>
+            <div class="adv-text">Онкология, хронические случаи, неясные диагнозы, интерпретация анализов.</div>
           </article>
+
           <article class="adv-card">
-            <div class="adv-title">Прозрачность и этика</div>
-            <div class="adv-text">Честно проговариваем варианты, риски и прогноз, без паники и без ложной надежды.</div>
+            <div class="adv-title">Этика и прозрачность</div>
+            <div class="adv-text">Объясняем варианты, прогнозы и риски спокойно, честно и без паники.</div>
           </article>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- DOCTORS -->
   <section class="section">
     <div class="container">
       <div class="section-header">
         <div>
           <h2 class="section-title">Врачи OnlyVet</h2>
-          <p class="section-subtitle">На главной — несколько специалистов для первого знакомства. Полный список будет на отдельной странице.</p>
+          <p class="section-subtitle">На главной — несколько специалистов. Все врачи — на отдельной странице.</p>
         </div>
-        <a href="#" class="section-link">Все врачи →</a>
+        <a href="doctors.html" class="section-link">Все врачи →</a>
       </div>
+
       <div class="cards-grid">
+
+        <!-- DOCTOR CARD 1 -->
         <article class="doctor-card">
-          <div class="doctor-head">
+          <div class="doctor-top">
             <div class="doctor-avatar">ЭМ</div>
             <div class="doctor-main">
               <div class="doctor-name">Эльвин Мазагирович</div>
               <div class="doctor-role">Ветеринарный врач, эксперт</div>
+              <div class="doctor-services">Консилиумы, онкология, сложные случаи</div>
               <div class="doctor-tags">
                 <span class="tag-soft">Консилиум</span>
                 <span class="tag">Сложные случаи</span>
               </div>
             </div>
           </div>
-          <div class="doctor-foot">
+          <div class="doctor-bottom">
             <span>Опыт &gt; 10 лет</span>
-            <button class="btn btn-outline" type="button">Профиль</button>
+            <button class="btn btn-primary">Записаться</button>
           </div>
         </article>
 
+        <!-- DOCTOR CARD 2 -->
         <article class="doctor-card">
-          <div class="doctor-head">
+          <div class="doctor-top">
             <div class="doctor-avatar">ДЧ</div>
             <div class="doctor-main">
               <div class="doctor-name">Диана Чемерилова</div>
               <div class="doctor-role">Ветеринарный врач</div>
+              <div class="doctor-services">Терапия, второе мнение</div>
               <div class="doctor-tags">
                 <span class="tag">Терапия</span>
                 <span class="tag">Кошки и собаки</span>
               </div>
             </div>
           </div>
-          <div class="doctor-foot">
+          <div class="doctor-bottom">
             <span>Приём онлайн</span>
-            <button class="btn btn-outline" type="button">Профиль</button>
+            <button class="btn btn-primary">Записаться</button>
           </div>
         </article>
 
+        <!-- DOCTOR CARD 3 -->
         <article class="doctor-card">
-          <div class="doctor-head">
+          <div class="doctor-top">
             <div class="doctor-avatar">ОВ</div>
             <div class="doctor-main">
               <div class="doctor-name">Олег Врач</div>
               <div class="doctor-role">Диагностика</div>
+              <div class="doctor-services">УЗИ, анализы, контроль динамики</div>
               <div class="doctor-tags">
                 <span class="tag">УЗИ</span>
                 <span class="tag">Анализы</span>
               </div>
             </div>
           </div>
-          <div class="doctor-foot">
+          <div class="doctor-bottom">
             <span>Работает в команде</span>
-            <button class="btn btn-outline" type="button">Профиль</button>
+            <button class="btn btn-primary">Записаться</button>
           </div>
         </article>
       </div>
     </div>
   </section>
 
+  <!-- SERVICES -->
   <section class="section">
     <div class="container">
       <div class="section-header">
         <div>
           <h2 class="section-title">Услуги</h2>
-          <p class="section-subtitle">Основные форматы работы. Потом сюда подтянем реальные данные из CRM и Vetmanager.</p>
+          <p class="section-subtitle">На главной показаны основные услуги. Полный каталог — на отдельной странице.</p>
         </div>
-        <a href="#" class="section-link">Все услуги →</a>
+        <a href="services.html" class="section-link">Все услуги →</a>
       </div>
       <div class="cards-grid">
+
         <article class="service-card">
-          <div class="service-name">Онлайн‑консультация</div>
-          <div class="service-description">Первичный и повторный приём, разбор жалоб и текущего лечения.</div>
+          <div class="service-name">Онлайн-консультация</div>
+          <div class="service-description">Первичный или повторный приём, разбор жалоб и текущего лечения.</div>
+          <div class="service-tags">
+            <span class="tag">Кошки</span>
+            <span class="tag">Собаки</span>
+          </div>
           <div class="service-meta">
             <span class="service-price">от 2 500 ₽</span>
-            <button class="btn btn-outline" type="button">Подробнее</button>
+            <button class="btn btn-primary">Подробнее</button>
           </div>
         </article>
 
         <article class="service-card">
           <div class="service-name">Второе мнение</div>
-          <div class="service-description">Проверяем диагноз, план лечения и альтернативы на основе протоколов.</div>
+          <div class="service-description">Проверяем диагноз и лечение, объясняем варианты на основе протоколов.</div>
+          <div class="service-tags">
+            <span class="tag">Сложные случаи</span>
+          </div>
           <div class="service-meta">
             <span class="service-price">от 3 000 ₽</span>
-            <button class="btn btn-outline" type="button">Подробнее</button>
+            <button class="btn btn-primary">Подробнее</button>
           </div>
         </article>
 
         <article class="service-card">
           <div class="service-name">Разбор анализов и УЗИ</div>
-          <div class="service-description">Подробное объяснение результатов и что они значат для вашего питомца.</div>
+          <div class="service-description">Чёткое объяснение результатов, динамики и дальнейших шагов.</div>
+          <div class="service-tags">
+            <span class="tag">Анализы</span>
+            <span class="tag">УЗИ</span>
+          </div>
           <div class="service-meta">
             <span class="service-price">от 1 800 ₽</span>
-            <button class="btn btn-outline" type="button">Подробнее</button>
+            <button class="btn btn-primary">Подробнее</button>
           </div>
         </article>
+
       </div>
     </div>
   </section>
 
+  <!-- REVIEWS -->
   <section class="section">
     <div class="container">
       <div class="section-header">
         <div>
-          <h2 class="section-title">Как это работает</h2>
-          <p class="section-subtitle">Простой процесс, в котором вы понимаете каждый шаг — от записи до плана лечения.</p>
+          <h2 class="section-title">Отзывы</h2>
+          <p class="section-subtitle">На главной отображены некоторые отзывы.</p>
         </div>
+        <a href="reviews.html" class="section-link">Все отзывы →</a>
       </div>
-      <div class="process-grid">
-        <article class="step-card">
-          <div class="step-num">1</div>
-          <div class="step-title">Регистрация и доступ</div>
-          <div class="step-text">Вы создаёте личный кабинет, добавляете себя и питомца. Всё хранится в защищённом виде.</div>
+
+      <div class="cards-grid">
+
+        <article class="review-card">
+          <div class="review-header">
+            <div>
+              <div class="review-author">Екатерина · Локи</div>
+              <div class="review-pet">Кошка, 2 года</div>
+            </div>
+            <div class="review-rating">★★★★★</div>
+          </div>
+          <div class="review-text">
+            Спокойное объяснение анализов, понятный план, всё структурировано.
+          </div>
         </article>
-        <article class="step-card">
-          <div class="step-num">2</div>
-          <div class="step-title">Загрузка документов</div>
-          <div class="step-text">Прикрепляете анализы, выписки, УЗИ, рентген. Мы изучаем материалы до начала консультации.</div>
+
+        <article class="review-card">
+          <div class="review-header">
+            <div>
+              <div class="review-author">Анна · Рекс</div>
+              <div class="review-pet">Собака, 6 лет</div>
+            </div>
+            <div class="review-rating">★★★★★</div>
+          </div>
+          <div class="review-text">
+            Получили второе мнение по онкологии. Стало ясно, что делать дальше.
+          </div>
         </article>
-        <article class="step-card">
-          <div class="step-num">3</div>
-          <div class="step-title">Консультация</div>
-          <div class="step-text">Обсуждаем состояние питомца, задаём уточняющие вопросы, формируем клиническую картину.</div>
+
+        <article class="review-card">
+          <div class="review-header">
+            <div>
+              <div class="review-author">Мария · Мира</div>
+              <div class="review-pet">Кошка, 9 лет</div>
+            </div>
+            <div class="review-rating">★★★★☆</div>
+          </div>
+          <div class="review-text">
+            Удобно онлайн, без стресса. Заключение подробное, с рекомендациями.
+          </div>
         </article>
-        <article class="step-card">
-          <div class="step-num">4</div>
-          <div class="step-title">План и сопровождение</div>
-          <div class="step-text">Вы получаете структурированное заключение, рекомендации и план наблюдения.</div>
-        </article>
+
       </div>
     </div>
   </section>
+
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div>© OnlyVet, 2025. Ветеринарная онлайн‑клиника.</div>
-    <div>Доказательная медицина · Забота без паники · Мы рядом, даже когда врач далеко.</div>
+    <div>© OnlyVet, 2025. Ветеринарная онлайн-клиника.</div>
+    <div>Доказательная медицина · спокойная коммуникация · Мы рядом, даже когда врач далеко.</div>
   </div>
 </footer>
+
 </div>
 </body>
 </html>

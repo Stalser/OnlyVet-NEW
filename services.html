@@ -2,113 +2,113 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OnlyVet</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Услуги OnlyVet</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="page">
+
 <header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="logo">
-      <div class="logo-badge">O</div>
+      <div class="logo-mark">O</div>
       <div>
-        <div class="logo-text-primary">OnlyVet</div>
-        <div class="logo-text-secondary">Онлайн-ветклиника</div>
+        <div class="logo-text-main">ONLYVET</div>
+        <div class="logo-text-sub">Ветеринарная онлайн-клиника</div>
       </div>
     </a>
+
     <nav class="nav">
       <a href="index.html">Главная</a>
-      <a href="services.html">Услуги</a>
       <a href="doctors.html">Врачи</a>
-      <a href="contacts.html">Контакты</a>
+      <a href="services.html" class="active">Услуги</a>
+      <a href="reviews.html">Отзывы</a>
     </nav>
+
     <div class="nav-cta">
-      <a href="client-dashboard.html" class="btn btn-outline">Личный кабинет</a>
-      <a href="client-dashboard.html" class="btn btn-primary">Записаться</a>
+      <a href="#" class="btn btn-outline">Войти</a>
+      <a href="#" class="btn btn-primary">Записаться</a>
     </div>
-    <button class="mobile-toggle" aria-label="Меню">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </header>
 
 <main>
-  <section class="section">
-    <div class="container">
-      <h1 class="page-title">Услуги OnlyVet</h1>
-      <p class="page-subtitle">
-        Все услуги и форматы работы. На этом этапе это примерная структура — позже сюда подтянутся реальные данные из CRM.
-      </p>
-      <div class="cards-row">
-        <article class="service-card">
-          <div class="service-name">Онлайн-консультация</div>
-          <div class="service-description">
-            Разбор жалоб, истории, текущих назначений и составление понятного плана действий.
-          </div>
-          <div class="service-meta">
-            <span class="service-price">от 2 500 ₽</span>
-            <div class="service-actions">
-              <a href="client-dashboard.html" class="btn btn-outline">Записаться</a>
-            </div>
-          </div>
-        </article>
 
-        <article class="service-card">
-          <div class="service-name">Второе мнение по диагнозу</div>
-          <div class="service-description">
-            Сверяем диагноз и лечение с актуальными протоколами, предлагаем альтернативы.
-          </div>
-          <div class="service-meta">
-            <span class="service-price">от 3 000 ₽</span>
-            <div class="service-actions">
-              <a href="client-dashboard.html" class="btn btn-outline">Записаться</a>
-            </div>
-          </div>
-        </article>
+<section class="section">
+  <div class="container">
 
-        <article class="service-card">
-          <div class="service-name">Разбор анализов и УЗИ</div>
-          <div class="service-description">
-            Детально объясняем каждый показатель, что он значит и как влияет на тактику.
-          </div>
-          <div class="service-meta">
-            <span class="service-price">от 1 800 ₽</span>
-            <div class="service-actions">
-              <a href="client-dashboard.html" class="btn btn-outline">Записаться</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <div class="service-name">Сопровождение хронических пациентов</div>
-          <div class="service-description">
-            Долгосрочное наблюдение, корректировка схем, контроль анализов и состояния.
-          </div>
-          <div class="service-meta">
-            <span class="service-price">индивидуально</span>
-            <div class="service-actions">
-              <a href="client-dashboard.html" class="btn btn-outline">Записаться</a>
-            </div>
-          </div>
-        </article>
-
+    <div class="section-header">
+      <div>
+        <h1 class="section-title">Все услуги OnlyVet</h1>
+        <p class="section-subtitle">
+          Позже здесь будут фильтры по виду животного, формату приёма, врачу.
+        </p>
       </div>
     </div>
-  </section>
+
+    <div style="margin-bottom:16px;">
+      <button class="btn btn-outline-dark">Все услуги</button>
+      <button class="btn btn-outline-dark">Онлайн-консультации</button>
+      <button class="btn btn-outline-dark">Второе мнение</button>
+      <button class="btn btn-outline-dark">Разбор анализов</button>
+    </div>
+
+    <div class="cards-grid">
+
+      <article class="service-card">
+        <div class="service-name">Онлайн-консультация</div>
+        <div class="service-description">Разбор жалоб, осмотр по видео/фото, составление плана.</div>
+        <div class="service-tags">
+          <span class="tag">Кошки</span>
+          <span class="tag">Собаки</span>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">от 2 500 ₽</span>
+          <button class="btn btn-primary">Подробнее</button>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-name">Второе мнение</div>
+        <div class="service-description">Пересмотр диагноза и лечения с объяснением протоколов.</div>
+        <div class="service-tags">
+          <span class="tag">Сложные случаи</span>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">от 3 000 ₽</span>
+          <button class="btn btn-primary">Подробнее</button>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-name">Разбор анализов и УЗИ</div>
+        <div class="service-description">Объясняем каждый показатель и что это значит для питомца.</div>
+        <div class="service-tags">
+          <span class="tag">Анализы</span>
+          <span class="tag">УЗИ</span>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">от 1 800 ₽</span>
+          <button class="btn btn-primary">Подробнее</button>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div>© OnlyVet, онлайн-ветеринарная клиника</div>
-    <div>
-      <a href="legal-terms.html">Оферта</a> ·
-      <a href="legal-policy.html">ПДн</a> ·
-      <a href="legal-rules.html">Правила</a>
-    </div>
+    <div>© OnlyVet, 2025</div>
+    <div>Честность · доказательность · спокойствие</div>
   </div>
 </footer>
+
 </div>
-<script src="script.js"></script>
 </body>
 </html>
